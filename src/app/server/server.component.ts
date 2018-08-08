@@ -6,6 +6,6 @@ import { Component } from "../../../node_modules/@angular/core";
     styleUrls: ['./server.component.css']
 })
 export class ServerComponent {
-    serverId: number = Math.floor((Math.random()*55));
+    serverId: number = 1 + Math.floor((Math.random()*55));
     serverStatus: string = "Running";
 }
