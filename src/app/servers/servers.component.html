@@ -16,7 +16,10 @@ class="btn btn-primary"
 [disabled]="!allowNewServer" 
 (click)="onCreateServer()"
 ><strong>+</strong> New Server</button>
-<span class="badge badge-warning" *ngIf="serverCreated">{{ serverCreationStatus }}</span>
+<span class="badge badge-warning" *ngIf="serverCreated else NoServer">{{ serverCreationStatus }}</span>
+<ng-template #NoServer>
+<span class="badge badge-secondary" #NoServer>{{ serverCreationStatus }}</span>
+</ng-template>
 <app-server></app-server>
 <app-server></app-server>
 <app-server></app-server>
