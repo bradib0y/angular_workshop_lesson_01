@@ -1,1 +1,3 @@
-<h4>Server with {{ serverId }} is {{ serverStatus }}</h4>
+<h4>Server with {{ serverId }} is {{ serverStatus }}
+    <span class="badge badge-pill" [ngClass]="getStatusStyle()">{{getStatusText()}}</span>
+</h4>
